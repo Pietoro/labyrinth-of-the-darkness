@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 
-header, nav, main, footer { display: contents; }
+header, nav, main, footer, section, article { display: contents; }
 
 html {
     --col: white;
@@ -61,6 +61,10 @@ body { margin: 0; }
     max-width: 800px;
     padding: 20px;
     background-color: var(--main-bg-col);
+}
+
+#tab-start, #tab-win {
+    display: none;
 }
 
 #board {
