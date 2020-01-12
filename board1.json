@@ -2,11 +2,11 @@
     "startX": 2,
     "startY": 1,
     "tiles": [
-        ["wall", "ground", "wall", "water", "water", "ground", "water", "wall"],
-        ["wall", "ground", "ground", "ground", "water", "ground", "water", "water"],
-        ["water", "wall", "ground", "wall", "ground", "ground", "ground", "wall"],
-        ["water", "wall", "ground", "ground", "ground", "wall", "ground", "wall"],
-        ["ground", "ground", "ground", "wall", "wall", "ground", "ground", "wall"],
-        ["wall", "wall", "ground", "ground", "wall", "ground", "wall", "wall"]
+        ["wall", "ground", "wall", "water", "water", "ground", "water", "wall", "wall", "water"],
+        ["wall", "ground", "ground", "ground", "water", "ground", "water", "water","wall", "water"],
+        ["water", "wall", "ground", "wall", "ground", "ground", "ground", "wall", "ground", "ground"],
+        ["water", "wall", "ground", "ground", "ground", "wall", "ground", "ground", "ground", "water"],
+        ["ground", "ground", "ground", "wall", "wall", "ground", "ground", "wall", "wall", "water"],
+        ["wall", "wall", "ground", "ground", "wall", "ground", "wall", "wall", "water", "water"]
     ]
 }
