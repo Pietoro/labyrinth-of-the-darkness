@@ -9,10 +9,6 @@ $font-color: white;
 $primary-font: Verdana, sans-serif;
 $secondary-font: 'Special Elite', cursive;
 
-$board-tile-size: 80px;
-$board-tiles-x: 7;
-$board-tiles-y: 6;
-
 
 header, nav, main, footer, section, article { display: contents;  }
 
@@ -23,14 +19,26 @@ html {
     background-color: $bg-color-dark;
     font-family: $primary-font;
     font-size: 20px;
-    
+
+    --board-tile-size: 80px;
+    --board-tiles-x: 7;
+    --board-tiles-y: 6;
 }
 
 body { 
-    height: 100%;
     margin: 0;
-    
 }
+
+.page-container {
+   position: relative;
+   min-height: 100vh;
+
+   .content-wrap {
+    padding-bottom: 40px;
+    }
+}
+
+
 
 #header {
     background-color: $bg-color-light;
@@ -61,7 +69,6 @@ body {
 }
 
 #main {
-    box-sizing: border-box;
     max-width: 900px;
     margin: auto;
     padding: 30px;
@@ -83,25 +90,23 @@ body {
     margin-right: auto;
     position: relative;
     display: grid;
-    grid-template: repeat($board-tiles-y, $board-tile-size) / repeat($board-tiles-x, $board-tile-size);
+    grid-template: repeat(var(--board-tiles-y), var(--board-tile-size)) / repeat(var(--board-tiles-x), var(--board-tile-size));
 }
 
 footer {
     position: absolute;
-    bottom: 0;
     margin: 0;
-    width: 100vw;
+    bottom: 0;
+    width: 100%;
     display: inline-block;
     height: 40px;
-    margin-top: -40px;
 }
 
 #footer {
-    position: relative;
-    padding: 5px;
+    padding: 12px;
     background-color: $bg-color-medium;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .tile-wall {
@@ -122,8 +127,8 @@ footer {
 
 .game-obj {
     position: absolute;
-    width: $board-tile-size;
-    height: $board-tile-size;
+    width: var(--board-tile-size);
+    height: var(--board-tile-size);
 }
 
 #hero {

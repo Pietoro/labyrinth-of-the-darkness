@@ -13,11 +13,22 @@ html {
   background-color: #1a1a1a;
   font-family: Verdana, sans-serif;
   font-size: 20px;
+  --board-tile-size: 80px;
+  --board-tiles-x: 7;
+  --board-tiles-y: 6;
 }
 
 body {
-  height: 100%;
   margin: 0;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-container .content-wrap {
+  padding-bottom: 40px;
 }
 
 #header {
@@ -52,8 +63,6 @@ body {
 }
 
 #main {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   max-width: 900px;
   margin: auto;
   padding: 30px;
@@ -76,26 +85,25 @@ body {
   position: relative;
   display: -ms-grid;
   display: grid;
-  grid-template: repeat(var(--board-tiles-y), var(--board-tile-size))/repeat(var(--board-tiles-y), var(--board-tile-size));
+  -ms-grid-rows: (var(--board-tile-size))[var];
+  -ms-grid-columns: (var(--board-tile-size))[var];
+      grid-template: repeat(var(--board-tiles-y), var(--board-tile-size))/repeat(var(--board-tiles-x), var(--board-tile-size));
 }
 
 footer {
   position: absolute;
-  bottom: 0;
   margin: 0;
-  width: 100vw;
+  bottom: 0;
+  width: 100%;
   display: inline-block;
   height: 40px;
-  margin-top: -40px;
 }
 
 #footer {
-  position: relative;
-  height: inherit;
-  padding: 8px;
+  padding: 12px;
   background-color: #262626;
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 
 .tile-wall {
@@ -116,8 +124,8 @@ footer {
 
 .game-obj {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: var(--board-tile-size);
+  height: var(--board-tile-size);
 }
 
 #hero {
